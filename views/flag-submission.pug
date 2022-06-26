@@ -9,6 +9,10 @@ html
   body.flex.items-center.justify-center.flex-col.h-screen.prose.font-press-start.max-w-full.mx-20
     h1.text-primary Submit a new flag
 
+    .absolute.top-7.right-7.flex.flex-col
+      a(href=challengesUrl).btn.btn-primary Go to challenges
+      a(href='/scoreboard').btn.btn-primary.mt-5 Go to scoreboard
+    
     if errors 
       each error in errors 
         div.alert.alert-error.max-w-2xl.mt-4= error

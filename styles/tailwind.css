@@ -1774,6 +1774,18 @@ html {
   position: static;
 }
 
+.absolute {
+  position: absolute;
+}
+
+.top-7 {
+  top: 1.75rem;
+}
+
+.right-7 {
+  right: 1.75rem;
+}
+
 .row-span-6 {
   grid-row: span 6 / span 6;
 }
@@ -1781,6 +1793,10 @@ html {
 .mx-20 {
   margin-left: 5rem;
   margin-right: 5rem;
+}
+
+.mt-5 {
+  margin-top: 1.25rem;
 }
 
 .mt-4 {
@@ -1819,12 +1835,8 @@ html {
   max-width: 42rem;
 }
 
-.max-w-7xl {
-  max-width: 80rem;
-}
-
-.grow {
-  flex-grow: 1;
+.max-w-screen-lg {
+  max-width: 1024px;
 }
 
 .flex-col {

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node app.js",
-    "start:dev": "NODE_ENV=development DATABASE_URL='postgres://localhost:5432/scoreboard' node app.js",
+    "start:dev": "NODE_ENV=development DATABASE_URL='postgres://localhost:5432/scoreboard' CHALLENGES_URL='https://ctf-static-staging.herokuapp.com/' node app.js",
     "build:style": "tailwind -i styles/input.css -o styles/tailwind.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

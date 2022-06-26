@@ -9,10 +9,18 @@ const {
   selectChallenges,
 } = require("./database");
 
+const { CHALLENGES_URL } = process.env;
+
+if (!CHALLENGES_URL) throw new Error("CHALLENGES_URL is not provided.");
+
 const renderFlagSubmissionForm = async (res, errors) => {
   const challenges = (await selectChallenges()).rows;
 
-  return res.render("flag-submission", { challenges, errors });
+  return res.render("flag-submission", {
+    challenges,
+    errors,
+    challengesUrl: CHALLENGES_URL,
+  });
 };
 
 const getScoreboard = async (req, res) => {
@@ -24,7 +32,7 @@ const getScoreboard = async (req, res) => {
     lastSubmission: format(user.last_submission, "yyyy-MM-dd HH:mm:ss.SSS"),
   }));
 
-  res.render("scoreboard", { users });
+  res.render("scoreboard", { users, challengesUrl: CHALLENGES_URL });
 };
 
 const getFlagSubmissionForm = async (req, res) => renderFlagSubmissionForm(res);
