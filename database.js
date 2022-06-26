@@ -6,6 +6,11 @@ if (!DATABASE_URL) throw new Error("DATABASE_URL is not provided!");
 
 const client = new Client({
   connectionString: DATABASE_URL,
+  ssl: ["staging", "production"].includes(process.env.NODE_ENV)
+    ? {
+        rejectUnauthorized: false,
+      }
+    : false,
 });
 
 const insertAttempt = async (name, challenge, flag) => {
