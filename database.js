@@ -63,6 +63,7 @@ const selectChallenges = async () => {
     `
       SELECT name
       FROM challenge
+      ORDER BY name
     `
   );
 

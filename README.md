@@ -13,5 +13,5 @@ Scoreboard for the Lab49 internal CTF.
 
 ## TODO
 
-- [ ] Order challenge names alphabetically
-- [ ] Add migration for data changes
+- [x] Order challenge names alphabetically
+- [x] Add migration for data changes
