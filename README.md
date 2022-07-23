@@ -1,6 +1,6 @@
 # lab49-ctf-scoreboard
 
-Scoreboard for the Lab49 internal CTF.
+A scoreboard project for a CTF event.
 
 ## Setup
 
